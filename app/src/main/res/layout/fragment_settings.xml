@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161614"
+    android:orientation="vertical"
+    tools:context=".SettingsFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:background="@color/lavender"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/general"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_margin="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/general"
+                android:textColor="#2979FF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:id="@+id/personalization"
+                android:layout_below="@+id/general"
+                android:text="@string/personalization"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/night"
+                android:layout_below="@id/personalization"
+                android:text="@string/night_mode"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/notification"
+                android:layout_below="@id/night"
+                android:text="@string/notifications"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/language"
+                android:layout_below="@id/notification"
+                android:text="@string/language"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/fullscreen"
+                android:layout_below="@id/language"
+                android:text="@string/fullscreen"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/font"
+                android:layout_below="@id/fullscreen"
+                android:text="@string/text_size"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/blocking"
+                android:layout_below="@id/font"
+                android:text="@string/ad_blocking"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/advanced"
+                android:layout_below="@id/blocking"
+                android:text="@string/advanced"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:id="@+id/help"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_below="@+id/advanced"
+                android:layout_margin="12dp"
+                android:gravity="center_vertical"
+                android:text="@string/help"
+                android:textColor="#2979FF"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:id="@+id/report"
+                android:layout_below="@id/help"
+                android:text="@string/report_a_problem"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:id="@+id/feedback"
+                android:layout_below="@id/report"
+                android:text="@string/feedbacks"
+                android:textColor="@color/gray"
+                android:gravity="center_vertical"
+                android:layout_marginStart="12dp"/>
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

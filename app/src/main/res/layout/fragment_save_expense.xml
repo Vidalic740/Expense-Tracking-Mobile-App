@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161614"
+    tools:context=".SaveExpenseFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_expense"
+        android:text="@string/save_expenses"
+        android:textSize="20sp"
+        android:textColor="#D3E9EC"
+        android:gravity="center"
+        android:layout_margin="30dp"/>
+
+    <EditText
+        android:layout_width="184dp"
+        android:layout_height="52dp"
+        android:id="@+id/expense_display"
+        android:layout_below="@+id/add_expense"
+        android:hint="@string/kes_0"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/expense_display"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="32dp"
+        android:autofillHints="false"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/category"
+        android:layout_below="@id/expense_display"
+        android:text="@string/category"
+        android:textSize="16sp"
+        android:textColor="#161614"
+        android:background="@drawable/back_ground"
+        android:backgroundTint="#D3E9EC"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:layout_margin="14dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/note"
+        android:layout_below="@id/category"
+        android:text="@string/note"
+        android:textSize="16sp"
+        android:textColor="#161614"
+        android:background="@drawable/back_ground"
+        android:backgroundTint="#D3E9EC"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:layout_margin="14dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:id="@+id/today"
+        android:layout_below="@id/note"
+        android:text="@string/today"
+        android:textSize="16sp"
+        android:textColor="#161614"
+        android:background="@drawable/back_ground"
+        android:backgroundTint="#D3E9EC"
+        android:gravity="center_vertical"
+        android:padding="14dp"
+        android:layout_margin="14dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="210dp"
+        android:layout_height="48dp"
+        android:id="@+id/save"
+        android:layout_below="@+id/today"
+        android:text="@string/save_expense"
+        android:backgroundTint="#E064F7"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="100dp"/>
+</RelativeLayout>

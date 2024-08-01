@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScannerFragment"
+    android:id="@+id/scanner">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#161614"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/toolbar"
+            android:background="@color/lavender"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/scan_button"
+            android:textColor="@color/black"
+            android:text="@string/scan"
+            android:textSize="18sp"
+            android:layout_marginStart="54dp"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/upload_button"
+            android:text="@string/upload"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginStart="12dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="54dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="@color/white"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

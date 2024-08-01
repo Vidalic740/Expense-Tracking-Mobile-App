@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#161614"
+    tools:context=".BudgetFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:id="@+id/toolbar"
+        android:background="#7C5BA4"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:id="@+id/display"
+                android:background="@drawable/back_ground"
+                android:backgroundTint="#05A3A8"
+                android:layout_margin="14dp"/>
+
+            <TextView
+                android:id="@+id/daily"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/daily_budget"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="34dp"
+                android:id="@+id/daily_display"
+                android:layout_below="@+id/daily"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:id="@+id/weekly"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="23dp"
+                android:text="@string/weekly_budget"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="34dp"
+                android:id="@+id/weekly_display"
+                android:layout_below="@+id/weekly"
+                android:layout_marginStart="143dp"
+                android:layout_marginTop="13dp"/>
+
+            <TextView
+                android:id="@+id/monthly"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="25dp"
+                android:text="@string/monthly_budget"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:layout_width="84dp"
+                android:layout_height="34dp"
+                android:id="@+id/monthly_display"
+                android:layout_below="@+id/monthly"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="28dp"
+                android:layout_marginTop="13dp"/>
+
+            <com.github.mikephil.charting.charts.PieChart
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:id="@+id/pieChart_view"
+                android:layout_below="@id/display"
+                android:layout_margin="16dp"/>
+
+            <TextView
+                android:id="@+id/daily_title"
+                android:layout_below="@+id/pieChart_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/daily_budget"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"/>
+
+            <EditText
+                android:id="@+id/daily_budget"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/daily_title"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="#546E7A"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/weekly_title"
+                android:layout_below="@+id/daily_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/weekly_budget"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/weekly_budget"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/weekly_title"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="#546E7A"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/monthly_title"
+                android:layout_below="@+id/weekly_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/monthly_budget"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/monthly_budget"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/monthly_title"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:textColorHint="#546E7A"
+                tools:ignore="LabelFor,SpeakableTextPresentCheck" />
+
+            <Button
+                android:layout_width="290dp"
+                android:layout_height="48dp"
+                android:id="@+id/save"
+                android:layout_below="@+id/monthly_budget"
+                android:layout_centerHorizontal="true"
+                android:text="@string/save"
+                android:textSize="18sp"
+                android:backgroundTint="@color/lavender"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:id="@+id/end"
+                android:layout_below="@+id/save"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#161614">
+
+    <TextView
+        android:id="@+id/edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:minHeight="48dp"
+        android:text="@string/edit_profile"
+        android:textColor="@color/gray"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/first_name"
+        android:layout_below="@+id/edit_profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/first_name"
+        android:textColorHint="@color/gray"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        tools:ignore="Autofill"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/middle"
+        android:layout_below="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/middle_name"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        android:importantForAutofill="no" />
+
+
+    <EditText
+        android:id="@+id/surname"
+        android:layout_below="@+id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/surname"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        android:importantForAutofill="no"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/phone_number"
+        android:layout_below="@+id/surname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/phone_number"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        android:importantForAutofill="no"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/date_of_birth"
+        android:layout_below="@id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/date_of_birth"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        tools:ignore="Autofill"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/country_details"
+        android:layout_below="@id/date_of_birth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/country"
+        android:inputType="textShortMessage"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        tools:ignore="Autofill"
+        android:clickable="true"/>
+
+    <EditText
+        android:id="@+id/city_details"
+        android:layout_below="@id/country_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:hint="@string/city"
+        android:inputType="textShortMessage"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        tools:ignore="Autofill"
+        android:clickable="true"/>
+
+    <Button
+        android:id="@+id/save_details"
+        android:layout_width="164dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/city_details"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#282"
+        android:text="@string/save_details"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#161614"
+    tools:context=".NotificationFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:id="@+id/bar"
+        android:background="@color/lavender"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/reminder"
+        android:layout_below="@+id/bar"
+        android:text="@string/expense_reminder"
+        android:textSize="14sp"
+        android:textColor="@color/gray"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="16dp"/>
+
+    <Switch
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:id="@+id/switch_material"
+        android:layout_below="@id/reminder"
+        android:text="@string/turn_on_notifications"
+        android:textSize="16sp"
+        android:textColor="@color/gray"
+        android:layout_marginStart="40dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:background="@drawable/back_ground"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+</RelativeLayout>

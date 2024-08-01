@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#161614">
+
+    <TextView
+        android:id="@+id/page_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:text="@string/log_in"
+        android:textSize="32sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_margin="30dp"/>
+
+    <ScrollView
+        android:layout_below="@id/page_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="ScrollViewCount,SpeakableTextPresentCheck">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/mail_hint"
+                android:layout_marginTop="46dp"
+                android:layout_margin="12dp"
+                android:textColorHint="@color/sky_blue"
+                android:backgroundTint="@color/gray"
+                app:hintTextAppearance="@style/TextHint">
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:hint="@string/email_address"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittext"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_hint"
+                android:layout_below="@id/mail_hint"
+                android:layout_marginTop="12dp"
+                android:layout_margin="12dp"
+                android:textColorHint="@color/sky_blue"
+                android:backgroundTint="@color/gray"
+                app:hintTextAppearance="@style/TextHint">
+
+                <EditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_centerHorizontal="true"
+                    android:drawablePadding="16dp"
+                    android:hint="@string/password"
+                    android:importantForAutofill="no"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:background="@drawable/edittext"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    tools:ignore="LabelFor,SpeakableTextPresentCheck,TextContrastCheck" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <ImageView
+                android:layout_width="38dp"
+                android:layout_height="42dp"
+                android:id="@+id/pass_btn"
+                android:layout_below="@+id/mail_hint"
+                android:layout_marginTop="23dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="20dp"
+                android:alpha="5"
+                android:onClick="ShowHidePass"
+                android:padding="5dp"
+                android:src="@drawable/baseline_password_24"
+                app:tint="@color/black"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_below="@id/password_hint"
+                android:id="@+id/login_btn"
+                android:layout_width="336dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/login"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="#E064F7"/>
+
+            <TextView
+                android:id="@+id/forgot"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/login_btn"
+                android:layout_marginTop="12dp"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="@string/forgot_password"
+                android:textColor="#0277BD"
+                android:textIsSelectable="true"
+                android:textSize="18sp"
+                android:clickable="true"/>
+
+            <Button
+                android:id="@+id/google"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/forgot"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="14dp"
+                android:backgroundTint="#8b7355"
+                android:text="@string/google_account"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                tools:ignore="TextSizeCheck" />
+
+            <Button
+                android:id="@+id/apple"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/forgot"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="25dp"
+                android:backgroundTint="#8b7355"
+                android:text="@string/apple_account"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                tools:ignore="TextSizeCheck" />
+
+            <TextView
+                android:id="@+id/info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/apple"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="18dp"
+                android:text="@string/info"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_below="@id/info"
+                android:id="@+id/register"
+                android:layout_width="336dp"
+                android:layout_height="48dp"
+                android:layout_margin="18dp"
+                android:backgroundTint="#E064F7"
+                android:text="@string/register"
+                android:textColor="@color/gray"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

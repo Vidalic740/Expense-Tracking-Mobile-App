@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterActivity"
+    android:orientation="vertical"
+    android:background="#161614">
+
+    <TextView
+        android:id="@+id/page_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
+        android:text="@string/sign_up"
+        android:textSize="32sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_margin="32dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mail_hint"
+        android:layout_below="@+id/page_tittle"
+        android:layout_margin="12dp"
+        android:textColorHint="@color/sky_blue"
+        app:hintTextAppearance="@style/TextHint">
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext"
+            android:hint="@string/email_address"
+            android:importantForAutofill="no"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            android:textColorHint="#01579B"
+            android:textCursorDrawable="@drawable/color_cursor"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass_hint"
+        android:layout_below="@id/mail_hint"
+        android:layout_margin="12dp"
+        android:textColorHint="@color/sky_blue"
+        app:hintTextAppearance="@style/TextHint">
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/mail_hint"
+            android:background="@drawable/edittext"
+            android:hint="@string/password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#01579B"
+            android:textCursorDrawable="@drawable/color_cursor"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/confirm_hint"
+        android:layout_below="@id/pass_hint"
+        android:layout_margin="12dp"
+        android:textColorHint="@color/sky_blue"
+        app:hintTextAppearance="@style/TextHint">
+
+        <EditText
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@+id/mail_hint"
+            android:background="@drawable/edittext"
+            android:hint="@string/confirm_password"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="#01579B"
+            android:textCursorDrawable="@drawable/color_cursor"
+            tools:ignore="LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/reg_btn"
+        android:layout_width="300dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/confirm_hint"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#cd661d"
+        android:text="@string/sign_up"
+        android:textSize="18sp"
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/signup"
+        android:layout_below="@+id/reg_btn"
+        android:text="@string/sign_up_with"
+        android:textSize="18sp"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/google"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/signup"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="25dp"
+        android:backgroundTint="#8b7355"
+        android:text="@string/google_account"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        tools:ignore="TextSizeCheck" />
+
+    <Button
+        android:id="@+id/apple"
+        android:layout_width="160dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/signup"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:backgroundTint="#8b7355"
+        android:text="@string/apple_account"
+        android:textColor="@color/gray"
+        android:textSize="18sp"
+        tools:ignore="TextSizeCheck" />
+
+</RelativeLayout>
