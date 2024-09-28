@@ -19,3 +19,7 @@ The Expense Tracker App is a mobile application designed to help users track the
 - **State Management**: Implemented using Android's ViewModel and LiveData.
 - **Data Visualization**: Used built-in Android chart libraries for creating charts and graphs.
 
+## Future Development
+In addition to the current implementation, I plan to work with the following languages and frameworks:
+- **React**: To build a cross-platform version of the app for both Android and iOS, enhancing user accessibility.
+- **JavaScript**: As part of the React ecosystem to handle frontend development.
